@@ -1,6 +1,6 @@
 class Flame < ApplicationRecord
 
-    #validates :yourname, :crushname, :result, presence:true
+    validates :yourname, :crushname, presence:true
 
     before_save :set_result
 
