@@ -1,0 +1,29 @@
+<%= render "header" %>
+<br/>
+<div class="container" style="width:70%;">
+<br/>
+
+
+<h3 class="text-center"><b>Name List</b></h3>
+<br/>
+<div class="container-fluid">
+<table class="table table-hover">
+  <thead class="thead-dark table-info">
+    <tr>
+      <th scope="col">YourName</th>
+      <th scope="col">CrushName</th>
+      <th scope="col">Result</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @flames.each do |flames| %>
+    <tr>
+        <td><%= flames.yourname %></td>
+        <td><%= flames.crushname %></td>
+        <td><%= flames.result %></td>
+        <td><%= link_to "Show", controller:"flames", action:"show", id:flames.id %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table> 

@@ -1,0 +1,26 @@
+<%= render "header" %>
+<br/>
+<br/>
+
+<div class="container" style="width:70%;">
+<h3 class="text-center"><b>Flames App</b></h3>
+<br/>
+<%= form_for @flames, url: "/flames", method: "POST" do |d|%>
+
+    <div class="form-group">
+    <h3><b><%= d.label :Your_Name %></b></h3>
+    <%= d.text_field :yourname, class:"form-control", placeholder:"Enter Your name" %>
+    <div  class="form-text"><b>Field Must Be Compulsory*.</b></div>
+    </div>
+    <br/>
+
+    <div class="form-group">
+    <h3><b><%= d.label :Crush_Name %></b></h3>
+    <%= d.text_field :crushname, class:"form-control", placeholder:"Enter Your crushname" %>
+    <div  class="form-text"><b>Field Must Be Compulsory*.</b></div>
+    </div>
+    <br/>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  <% end %>
+  </div>
